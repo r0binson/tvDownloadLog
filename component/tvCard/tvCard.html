@@ -1,14 +1,14 @@
-<div class="tvCard" ng-click="editCard(tvLogInfo)">
-  <div class="titleRow">
-    <div ng-bind="tvLogInfo.title" class="title"></div>
+<div class="tvCard2" ng-click="editCard(tvLogInfo)">
+  <div class="tvCardDayOfWeek">
+    <span class="day" ng-class="{active:'Sunday' === tvLogInfo.dayOfWeek}">Sun</span>
+    <span class="day" ng-class="{active:'Monday' === tvLogInfo.dayOfWeek}">Mon</span>
+    <span class="day" ng-class="{active:'Tuesday' === tvLogInfo.dayOfWeek}">Tue</span>
+    <span class="day" ng-class="{active:'Wednesday' === tvLogInfo.dayOfWeek}">Wed</span>
+    <span class="day" ng-class="{active:'Thursday' === tvLogInfo.dayOfWeek}">Thu</span>
+    <span class="day" ng-class="{active:'Friday' === tvLogInfo.dayOfWeek}">Fri</span>
+    <span class="day" ng-class="{active:'Saturday' === tvLogInfo.dayOfWeek}">Sat</span>
   </div>
-  <div class="tvCardRow">
-    <div><span class="detailTitle">Every : </span><span ng-bind="tvLogInfo.dayOfWeek" class="detail"></span></div>
-  </div>
-  <div class="tvCardRow">
-    <div><span class="detailTitle">Last Download : </span><span ng-bind="tvLogInfo.downloadDate" class="detail"></span></div>
-  </div>
-  <div class="tvCardRow">
-    <div><span class="detailTitle">Latest Episode : </span><span ng-bind="tvLogInfo.latestEpisode" class="detail"></span></div>
-  </div>
+  <div class="tvCardTitle" ng-bind="tvLogInfo.title"></div>
+  <span class="downloadDate" ng-bind="tvLogInfo.downloadDate"></span>
+  <span class="episode" ng-bind="tvLogInfo.latestEpisode"></span>
 </div>

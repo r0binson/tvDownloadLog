@@ -11,26 +11,17 @@ logApp.controller('indexController', ['$scope', 'showService','dateUtil', '$time
     scope.messageVisible = false;
 
     scope.$watch('showMessage', function() {
-      console.log('Fist pass call');
       if(scope.showMessage === true){
         hideMessage(5000);
       }
     });
 
-    console.log('messagVisible:', scope.messageVisible);
-
     refresh(scope.dayOfWeek);
 
     scope.refresh = function (dayOfWeek) {
       if(dayOfWeek === ""){
-
-        console.log('empty dayofWeek');
-
         refresh(scope.dayOfWeek);
       } else {
-
-        console.log('Non empty dayofWeek');
-
         refresh(dayOfWeek);
       }
     }
@@ -75,8 +66,6 @@ logApp.controller('indexController', ['$scope', 'showService','dateUtil', '$time
           scope.tvLogs = response.data;
         });
       } else {
-
-        console.log('getShowsByDayOfWeek called');
         showService.getShowsByDayOfWeek(dayOfWeek).then(function (response) {
           scope.tvLogs = response.data;
         });

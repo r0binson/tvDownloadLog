@@ -1,0 +1,60 @@
+.tvCard2 {
+  min-height: 230px;
+  max-height: 250px;
+  background: #FFC;
+  border: solid 0.5px #d6d6d6;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.tvCard2 .tvCardDayOfWeek {
+  text-align: center;
+  background: #FCC;
+}
+.tvCard2 .day {
+  width: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  color: #999;
+}
+.tvCard2 .active {
+  background: #88c1d4;
+  font-weight: 400;
+  color: #FFF;
+}
+.tvCardTitle {
+  text-align: center;
+  font-size: 2.25em;
+  font-weight: 700;
+  padding: 1.65em 0em;
+  color: #699;
+}
+.downloadDate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 12px 12px 10px 15px ;
+  line-height: 1.8em;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #88c1d4;
+}
+.episode {
+  background: #88c1d4;
+  color: #e7F6fb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: solid 0.5px;
+  margin: 12px;
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  width: 2em;
+  line-height: 1.9em;
+  height: 2em;
+  border-radius: 2em;
+}
