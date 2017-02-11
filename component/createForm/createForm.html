@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="logEntry">
+        <div class="row">
+          <div class="col-xs-12">
+            <input type="text" ng-model="tvShow.title" class="showTitle" placeholder="Title" ng-click="showDetails()"
+                   ng-blur="initializeDefaultFields()">
+          </div>
+        </div>
+        <div ng-show="show">
+          <div class="row">
+            <div class="col-xs-12">
+              <input type="text" ng-model="tvShow.latestEpisode" class="currentEpisode" placeholder="Latest Episode">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <!--<input type="text" ng-model="tvShow.dayOfWeek" class="dayOfWeek" placeholder="Mondays, Tuesdays ...">-->
+              <input type="text" ng-model="tvShow.dayOfWeek" class="dayOfWeek" placeholder="Mondays, Tuesdays ..."
+                     list="listid">
+              <datalist id='listid'>
+                <option value='Sundays'>
+                <option value='Mondays'>
+                <option value='Tuesdays'>
+                <option value='Wednesdays'>
+                <option value='Thursdays'>
+                <option value='Fridays'>
+                <option value='Saturdays'>
+              </datalist>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <input type="text" ng-model="tvShow.downloadDateDisplay" class="dateDownloaded" placeholder="Download Date">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <span>
+                <p class="save text-right" ng-click="save()">Save</p>
+                <p class="save text-right" ng-click="cancel()">Cancel</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

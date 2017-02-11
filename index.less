@@ -1,0 +1,244 @@
+@import "util";
+.indexMain {
+  background: whitesmoke;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchBox, .showTitle {
+  display: block;
+  border: none;
+  height: 50px;
+  padding: 15px;
+  vertical-align: middle;
+  border-radius: 4px;
+  font-size: 1.5em;
+  outline: none;
+
+  margin: auto;
+}
+
+.searchBox {
+  width: 320px;
+}
+
+.logEntry {
+  //border: solid 1px;
+  border-radius: 5px;
+  background-color: #9acfea;
+  margin: 10px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.showTitle {
+  width: 300px;
+  margin: 15px auto;
+  padding: 0px 10px;
+}
+
+.dayOfWeek, .currentEpisode, .dateDownloaded {
+  display: block;
+  background-color: #9acfea;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  height: 20px;
+  width: 300px;
+  padding: 15px;
+  vertical-align: middle;
+  font-size: 1.3em;
+  margin: 10px auto;
+  outline: none;
+}
+
+
+.save {
+  font-size: 1.25em;
+  color: white;
+  font-weight: 500;
+  margin-top: 10px;
+  padding-right: 25px;
+}
+
+.tvCard {
+  background: #FFF1CD;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  .titleRow {
+    padding: 0px 20px;
+    border-bottom: solid 1px #D6D6D6;
+  }
+
+  .title {
+    font-size: 1.25em;
+    font-weight: 600;
+    text-align: center;
+    //border: solid 1px;
+    color: #5763C1;
+
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .tvCardRow {
+    margin: 10px 15px;
+  }
+
+  //.detailTitle, .detail {
+  //  font-size: 1.25em;
+  //}
+
+  .detailTitle {
+    font-weight: 600;
+    text-align: right;
+    color: #7B86DB
+  }
+
+  .detail {
+    color: #5763C1;
+    font-weight: 700;
+  }
+}
+
+//@media (min-width: 768px) {
+@media (min-width: 600px) {
+  .logEntry {
+    margin: 15px auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .searchBox, .showTitle {
+    font-size: 2em;
+    height: 60px;
+  }
+
+  .searchBox {
+    width: 520px;
+  }
+
+  .showTitle {
+    width: 500px;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .dayOfWeek, .currentEpisode, .dateDownloaded {
+    width: 500px;
+    height: 50px;
+    padding: 20px;
+    font-size: 2em;
+    margin: 10px auto;
+  }
+
+  .save {
+    font-size: 2em;
+    padding-right: 30px;
+  }
+
+  .tvCard {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+
+    .titleRow {
+      padding: 0px 20px;
+    }
+
+    .title {
+      font-size: 1.4em;
+    }
+  }
+
+}
+
+//@varWidth: 460px;
+
+@media (min-width: 992px) {
+  .header {
+    height: 120px
+  }
+
+  .searchBox, .showTitle {
+    height: 50px;
+    font-size: 1.60em;
+  }
+
+  .searchBox {
+    width: 580px;
+  }
+
+  .logEntry {
+    max-width: 540px;
+    margin: 20px auto;
+  }
+
+  .showTitle {
+    //width: @varWidth;
+    margin: 10px auto;
+  }
+
+  .dayOfWeek, .currentEpisode, .dateDownloaded {
+    //width: @varWidth;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.6em;
+    margin: 10px auto;
+  }
+
+  .save {
+    padding-right: 40px;
+    font-size: 1.6em;
+  }
+
+  .cards {
+    margin: auto;
+    max-width: 990px;
+  }
+
+  .tvCard {
+    max-width: 330px;
+    margin-bottom: 30px;
+    //margin: 0px 15px 30px 15px;
+    font-size: 1.3em;
+    height: 260px;
+
+    .titleRow {
+      padding: 0px 20px;
+    }
+
+    .title {
+      font-size: 1.4em;
+      //.truncate-line(250px);
+    }
+  }
+
+  // Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    .cards {
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    .tvCard {
+      max-width: 400px;
+    }
+  }
+
+}
+
+
+//For Testing
+.box {
+  border: solid 1px;
+  height: 3em;
+  width: 30em;
+  margin: auto;
+}

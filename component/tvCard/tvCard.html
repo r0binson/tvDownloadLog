@@ -1,0 +1,14 @@
+<div class="tvCard" ng-click="editCard(tvLogInfo)">
+  <div class="titleRow">
+    <div ng-bind="tvLogInfo.title" class="title"></div>
+  </div>
+  <div class="tvCardRow">
+    <div><span class="detailTitle">Every : </span><span ng-bind="tvLogInfo.dayOfWeek" class="detail"></span></div>
+  </div>
+  <div class="tvCardRow">
+    <div><span class="detailTitle">Last Download : </span><span ng-bind="tvLogInfo.downloadDate" class="detail"></span></div>
+  </div>
+  <div class="tvCardRow">
+    <div><span class="detailTitle">Latest Episode : </span><span ng-bind="tvLogInfo.latestEpisode" class="detail"></span></div>
+  </div>
+</div>

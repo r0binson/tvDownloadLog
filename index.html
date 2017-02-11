@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="logApp">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="index.css" rel="stylesheet" type="text/css"/>
+  <link href="util.css" rel="stylesheet" type="text/css"/>
+  <link href="modal.css" rel="stylesheet" type="text/css"/>
+  <link href="component/dayOfWeek/dayOfWeek.css" rel="stylesheet" type="text/css"/>
+  <title>Series Download Log</title>
+</head>
+<body class="indexMain">
+<div ng-controller="indexController">
+  <form ng-submit="searchShow()">
+    <div class="header">
+      <input type="text" class="searchBox" placeholder="Search"
+             ng-model="tvTitleSearch" ng-keypress="searchShows($event)">
+    </div>
+  </form>
+  <day-of-week dow="dayOfWeek" refresh="refresh(dayOfWeek)"></day-of-week>
+
+  <div class="container-fluid content">
+    <!--create Component-->
+    <create-form tv-show="tvShow" message="message" show-message="showMessage" refresh="refresh"></create-form>
+
+    <!-- Message Area -->
+    <div class="alert alert-danger" role="alert" ng-show="showMessage" ng-bind="message"></div>
+
+    <!--Cards display -->
+    <div class="row cards">
+      <div ng-repeat="tvLogInfo in tvLogs">
+        <div class="col-xs-12 col-md-4">
+          <tv-card info="tvLogInfo" refresh="refresh"></tv-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+<script src="jquery-3.1.1/jquery-3.1.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="angular1.6/angular.min.js"></script>
+<script src="angular1.6/angular-route.min.js"></script>
+<script src="angularUI/ui-bootstrap-tpls-2.4.0.min.js"></script>
+<script src="common/app.js"></script>
+<script src="common/indexController.js"></script>
+<script src="util/DateUtil.js"></script>
+<script src="services/TvShowService.js"></script>
+
+<!-- Components -->
+<script src="component/createForm/createForm.dctv.js"></script>
+<script src="component/tvCard/tvCard.dctv.js"></script>
+<script src="component/tvCard/tvCardModalController.js"></script>
+<script src="component/dayOfWeek/dayOfWeek.dctv.js"></script>
+</html>
+
+
+<!--<div class="box"></div>-->
