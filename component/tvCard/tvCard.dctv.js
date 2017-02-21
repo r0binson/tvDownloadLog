@@ -10,7 +10,7 @@ logApp.directive('tvCard', function () {
       refresh: "&"
     },
     controller: ['$scope', '$uibModal', 'showService',
-      function (scope, uibModal, showService) {
+      function (scope, uibModal) {
         scope.editCard = function () {
           var modalInstance = uibModal.open({
             templateUrl: 'component/tvCard/tvCardModalTemplate.html',

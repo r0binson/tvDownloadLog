@@ -23,17 +23,16 @@ logApp.directive('createForm', ['showService', 'dateUtil', function (showService
         var tvShowLog = {
           title: tvShow.title,
           latestEpisode: tvShow.latestEpisode,
-          dayOfWeek: tvShow.dayOfWeek,
           downloadDate: tvShow.downloadDate
         }
 
-        showService.newShow(tvShowLog).then(function(response){
+        showService.newShow(tvShowLog).then(function (response) {
           scope.showMessage = true;
           scope.message = response.data.message;
-          scope.refresh()(tvShowLog.dayOfWeek);
+          scope.refresh()(dateUtil.getDayOfWeek(new Date()));
 
           //TODO: Show some display here of the response
-        }, function(error){
+        }, function (error) {
           alert(error.message);
           //TODO: Show error response
           console.log('error:', error);
@@ -48,7 +47,6 @@ logApp.directive('createForm', ['showService', 'dateUtil', function (showService
 
       scope.initializeDefaultFields = function () {
         var dateToday = new Date();
-        tvShow.dayOfWeek = dateUtil.getDayOfWeek(dateToday);
         tvShow.downloadDate = dateUtil.getMySqlDateFormat(dateToday);
         tvShow.downloadDateDisplay = dateUtil.getDisplayDate(dateToday);
       }
@@ -58,7 +56,6 @@ logApp.directive('createForm', ['showService', 'dateUtil', function (showService
         tvShow.latestEpisode = "";
         tvShow.downloadDate = "";
         tvShow.downloadDateDisplay = "";
-        tvShow.dayOfWeek = "";
         scope.show = false;
       }
     }
